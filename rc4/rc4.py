@@ -1,6 +1,6 @@
 import base64
 
-key = 'a2V5'
+key = "a2V5"
 message = "bWVhYXNnZQ=="
 
 key = [ord(i) for i in base64.b64decode(key)]
