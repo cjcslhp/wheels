@@ -1,7 +1,11 @@
 import base64
+import sys
 
-key = "a2V5"
-message = "bWVhYXNnZQ=="
+# key = "a2V5"
+# message = "bWVhYXNnZQ=="
+
+message = sys.argv[1]
+key = sys.argv[2]
 
 key = [ord(i) for i in base64.b64decode(key)]
 message = [ord(i) for i in base64.b64decode(message)]
