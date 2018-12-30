@@ -1,6 +1,6 @@
 import sys
 
 def powerDecode(m):
-    pass
+	return "".join([chr(ord('A')+sum(2**int(j) for j in i)-1) for i in m.split(',')])
 
-print(powerEncode(sys.argv[1]))
+print(powerDecode(sys.argv[1]))
