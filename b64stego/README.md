@@ -1,5 +1,7 @@
 ## base64隐写工具
 
+根据[base64](https://en.wikipedia.org/wiki/Base64)的填充规则，向填充位写入或从中读出隐藏信息。
+
 >deStego(stegoFile)
 
 从隐写文件stegoFile提取字符串
