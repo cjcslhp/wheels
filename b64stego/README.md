@@ -10,6 +10,8 @@
 
 根据源文件sourceFile隐写字符串message,base64保存到stegoFile
 
+如果遇到最后一个字符显示不正常，建议在`stego.txt`尾添加空格。
+
 ##### Example:
 ```
 In [249]: %run b64EnStego.py
