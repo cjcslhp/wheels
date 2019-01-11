@@ -7,7 +7,7 @@ def deStego(stegoFile):
         for line in stegoText:
             try:
                 text = line[line.index("=") - 1:-1]
-                message += "".join([ bin( 0 if i == '=' else b64table.find(i))[2:].zfill(6) for i in text])[6-2*text.count('='):6] 
+                message += "".join([ bin( 0 if i == '=' else b64table.find(i))[2:].zfill(6) for i in text])[2 if text.count('=') ==2 else 4:6]  
             except:
                 pass
     return "".join([chr(int(message[i:i+8],2)) for i in range(0,len(message),8)])
