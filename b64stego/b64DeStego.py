@@ -1,4 +1,5 @@
 import base64
+import sys
 
 def deStego(stegoFile):
     b64table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
@@ -12,4 +13,7 @@ def deStego(stegoFile):
                 pass
     return "".join([chr(int(message[i:i+8],2)) for i in range(0,len(message),8)])
 
-print(deStego("stego.txt"))
+if len(sys.argv) == 2:
+    print(deStego(sys.argv[1]))
+else:
+    print(deStego("stego.txt"))
