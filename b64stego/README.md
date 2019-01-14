@@ -2,6 +2,20 @@
 
 根据[base64](https://en.wikipedia.org/wiki/Base64)的填充规则，向填充位写入或从中读出隐藏信息。
 
+
+##### 使用方法
+
+读信息：  
+
+`python b64DeStego.py 隐写文件(默认stego.txt)`  
+
+隐写：  
+
+`python b64EnStego.py 原文件 隐写文件 (默认 source.txt stego.txt) 隐写内容`  
+
+
+##### 函数说明
+
 >deStego(stegoFile)
 
 从隐写文件stegoFile提取字符串
