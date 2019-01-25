@@ -4,8 +4,12 @@ import sys
 # key = "a2V5"
 # message = "bWVhYXNnZQ=="
 
-message = sys.argv[1]
-key = sys.argv[2]
+if len(sys.argv) == 3:
+    message = sys.argv[1]
+    key = sys.argv[2]
+else:
+    message = raw_input("input message:")
+    key = raw_input("input key:")
 
 key = [ord(i) for i in base64.b64decode(key)]
 message = [ord(i) for i in base64.b64decode(message)]
