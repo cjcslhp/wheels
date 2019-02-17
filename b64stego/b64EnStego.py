@@ -16,8 +16,8 @@ def enStego(sourceFile,setgoFile,message):
                 break
     return len(message)
 
-
-if len(sys.argv) == 4:
-    print("Remaining",enStego(sys.argv[1],sys.argv[2],sys.argv[3]),"bits!")
-else:
-    print("Remaining",enStego("source.txt","stego.txt","SimpleMessage\n"),"bits!")
+if __name__ == "__main__":
+    if len(sys.argv) == 4:
+        print("Remaining",enStego(sys.argv[1],sys.argv[2],sys.argv[3]),"bits!")
+    else:
+        print("Remaining",enStego("source.txt","stego.txt","SimpleMessage\n"),"bits!")

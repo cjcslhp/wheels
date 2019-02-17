@@ -13,7 +13,8 @@ def deStego(stegoFile):
                 pass
     return "".join([chr(int(message[i:i+8],2)) for i in range(0,len(message),8)])
 
-if len(sys.argv) == 2:
-    print(deStego(sys.argv[1]))
-else:
-    print(deStego("stego.txt"))
+if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        print(deStego(sys.argv[1]))
+    else:
+        print(deStego("stego.txt"))
