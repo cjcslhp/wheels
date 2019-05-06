@@ -8,12 +8,12 @@ def factor(n,e,c):
     f = FactorDB(n)
     print("[*] Try connect")
     if f.connect().status_code != 200:
-        print("[-] Connect Failed")
+        print("[x] Connect Failed")
         return 0
 
     lst = f.get_factor_list()
     if len(lst) == 1:
-        print("[-] Factor Failed")
+        print("[x] Factor Failed")
         return 0
 
     print("[*] the factor result:",lst)
@@ -36,7 +36,5 @@ def main(n,e,c):
     return
 
 if __name__ == "__main__":
-    n = int(open("n.txt",'r').read())
-    e = int(open("e.txt",'r').read())
-    c = int(open("c.txt",'r').read())
+    exec(open("nec.txt").read())
     main(n,e,c)

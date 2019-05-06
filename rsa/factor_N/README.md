@@ -4,7 +4,7 @@
 
 - [x] factordb分解
 
-##### Example:
+### Example:
 
 ``` shell
 python3 factor_N.py
