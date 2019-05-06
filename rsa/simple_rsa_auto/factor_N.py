@@ -23,19 +23,17 @@ def factor(n,e,c):
         tn = tn // i * (i-1)
     
     d = invert(e, tn)
-    print("[?] Maybe success")
+    print("[*] Maybe success")
     print("[!] flag:",long_to_bytes(pow(c,d,n)))
     return 1
 
 def main(n,e,c):
     if factor(n,e,c):
-        go = input("[*] Continue? (y/n)")
-        if go != 'y':
-            print("[-] Thanks, bye~")
-            return
-    
-    print("[*] Building~")
-    print("[-] Thanks, bye~")
+        print("[-] Thanks, bye~")
+        return
+
+    print("[-] Sorry, it's not easy~")
+    return
 
 if __name__ == "__main__":
     n = int(open("n.txt",'r').read())
